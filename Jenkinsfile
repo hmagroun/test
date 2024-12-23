@@ -8,7 +8,11 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                sh 'mvn -version'
+                sh '''
+		   mvn -version
+		   cat f2.txt
+		'''
+
             }
         }
     }
